@@ -7,14 +7,230 @@
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="2487.2">
   <style type="text/css">
-    p.p1 {margin: 50.0px 0.0px 0.0px 0.0px; font: 50.0px Helvetica}
+    /* p.p1 {margin: 50.0px 0.0px 0.0px 0.0px; font: 50.0px Helvetica}
     h1 {text-align: center; color: brown;}
+    h3 {text-align: center;}
     p {text-align: center;}
+    img {
+      margin-left: 30px;
+      margin-top: 30px;
+       border-radius: 50%;
+    }
+    div {
+      width: 250px;
+      margin-left: 30px;
+    } */
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      margin: 50px;
+      padding: 30px;
+      column-gap: 0cap;
+      background-color: aliceblue;
+    }
+    img {
+      border-radius: 50%;
+    }
+
+    .about {
+      color: grey;
+      font-size: small;
+    }
+
+    .contact {
+      background-color: rgb(5, 149, 197);
+      width: 200px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+    }
+
+    .gallaryContainer {
+      width: 90%;
+      padding: 20px;
+      margin: 10px auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    .box {
+      width: 250px;
+      margin: 0 10px;
+      box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
+      transition: 1s;
+    }
+
+    .box img {
+      display: block;
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .box:hover {
+      transform:scale(1.3);
+      z-index: 2;
+    }
+
+    .teamContainer {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      grid-auto-rows: minmax(40px, auto);
+      margin: 20px;
+      justify-content: center; /* centers items horizontally */
+      align-items: center; /* centers items vertically */
+
+    }
+
+    .teambox {
+      border-radius: 50%;
+      justify-content: center; /* centers items horizontally */
+      align-items: center; /* centers items vertically */
+      text-align: center;
+      width: 200px;
+      background-color:  rgb(5, 149, 197);
+      box-shadow: 0 0 20px 2px rgba(146, 146, 146, 0.05);
+    }
+
+    .teambox img {
+      display: block;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+
+    p {
+      font-family: Verdana;
+    }
+
+    .footer {
+      height: 200px;
+      margin-top: 50px;
+      background-color: aliceblue;
+      
+    }
 
   </style>
+  <script type="text/javascript">
+    function socialMediaTrigger(element) {
+      // alert("You Pressed:  " + element);
+      var id =  element
+      var url = ""
+      switch (id) {
+        case "linkedin":
+          url = "https://in.linkedin.com/in/hazarathreddyg"
+          break;
+        case "medium":
+          url = "https://medium.com/@hazarathreddy"
+          break;
+        case "youtube":
+          url = "https://www.youtube.com/@PrashviVlogs"
+          break;
+        case "git":
+          url = "https://github.com/HazarathReddy"
+          break
+      }
+      window.open(url, '_blank').focus();
+
+    }
+
+    function contactMe() {
+      alert("Contact to Mobile Number: 9666488108")
+    }
+
+  </script>
 </head>
 <body>
-<h1>Welcome to Airtel Xsafe Application</h1>
-<p> The Airtel Xsafe surveillance system is a combination of Wi-Fi-enabled security cameras and a fully-featured home monitoring service that works together</p>
+  <div class="container" >
+    <div class="profileImage">
+        <img src="../WebApp/assets/profile_pic.png" width="250" height="250">
+    </div>
+    <div class="profileText">
+          <h1 style="color: rgb(5, 149, 197);">Hazarath Reddy</h1>
+          <h3 style="color: rgb(104, 103, 103);">Sr. Lead Engineer</h3>
+          <div class="sociaMedia">
+            <img id="linkedin" src="../WebApp/assets/linkedin.png" width="25" height="25" onclick="socialMediaTrigger(this.id)">
+            <img id="medium" src="../WebApp/assets/medium.png" width="25" height="25" onclick="socialMediaTrigger(this.id)">
+            <img id="youtube" src="../WebApp/assets/youtube.png" width="25" height="25" onclick="socialMediaTrigger(this.id)">
+            <img id="git"  src="../WebApp/assets/github.png" width="25" height="25" onclick="socialMediaTrigger(this.id)">
+           </div>
+           <p class="about">With over X years of experience. I am commited to deliver great products to customers with brillent experience</p>
+           <div class="contact" onclick="contactMe()">
+            <p style="text-align: center; color: white;">Connect with Me</p>
+           </div>
+    </div>
+</div>
+
+<h3 style="margin-left:  50px; margin-bottom: 30px; margin-top: 40px; color: rgb(5, 149, 197); text-align: center;">- - - - - - - - - -   &nbsp Experience at Airtel  &nbsp - - - - - - - - - -</h3>
+<p style="margin-left: 50px; margin-right: 50px; color: rgb(131, 130, 130); text-align: center;">My learning at Airtel is a never ending process. it's providing me the opportunity to learn and build for organization. I am utilizing those opportunities in right way to run my projects into profitable way and Really thankful to Organizaiton and supporter for keep supporting me all the time.</p>
+<h3 style="margin-left:  50px; margin-top: 40px; color: rgb(5, 149, 197); text-align: center;">- - - - - - - - - -   &nbsp Memories in Airtel   &nbsp - - - - - - - - - -</h3>
+<div class="gallaryContainer">
+  <div class="box">
+    <img class="gallaryImg" src="../WebApp/assets/cris.jpeg" width="100px" height="200px">
+  </div>
+  <div class="box">
+    <img class="gallaryImg" src="../WebApp/assets/cricket.jpeg" width="100px" height="200px">
+  </div>
+  <div class="box">
+    <img  class="gallaryImg" src="../WebApp/assets/group1.jpeg" width="100px" height="200px">
+  </div>
+  <div class="box">
+    <img  class="gallaryImg" src="../WebApp/assets/yoga.jpeg" width="100px" height="200px">
+  </div>
+  <div class="box">
+    <img  class="gallaryImg" src="../WebApp/assets/carrams.jpeg" width="100px" height="200px">
+  </div>
+</div>
+<h3 style="margin-left:  50px; margin-bottom: 70px; margin-top: 40px; color: rgb(5, 149, 197); text-align: center;">- - - - - - - - - -   &nbsp My Team   &nbsp - - - - - - - - - -</h3>
+<div class="teamContainer">
+  <div class="teambox">
+    <img class="gallaryImg" src="../WebApp/assets/Yuvi.jpeg">
+    <p style="color: white;">Yuvaraju</p>
+  </div>
+  <div class="teambox">
+    <img class="gallaryImg" src="../WebApp/assets/saurabh.png">
+    <p style="color: white;">Saurabh</p>
+  </div>
+  <div class="teambox">
+    <img  class="gallaryImg" src="../WebApp/assets/surya.PNG">
+    <p style="color: white;">Surya</p>
+  </div>
+  <div class="teambox">
+    <img  class="gallaryImg" src="../WebApp/assets/profile_pic.png">
+    <p style="color: white;">Hazarath</p>
+  </div>
+  <div class="teambox">
+    <img  class="gallaryImg" src="../WebApp/assets/vijay.PNG">
+    <p style="color: white;">Vijay</p>
+  </div>
+  <div class="teambox">
+    <img  class="gallaryImg" src="../WebApp/assets/sumanth.PNG">
+    <p style="color: white;">Sumanth</p>
+  </div>
+  <div class="teambox">
+    <img class="gallaryImg" src="../WebApp/assets/sai.PNG">
+    <p style="color: white;">Sai Vamsi</p>
+  </div>
+  <div class="teambox">
+    <img class="gallaryImg" src="../WebApp/assets/galla.png">
+    <p style="color: white;">Baby Galla</p>
+  </div>
+  <div class="teambox">
+    <img  class="gallaryImg" src="../WebApp/assets/divya.PNG">
+    <p style="color: white;">Divya</p>
+  </div>
+  <div class="teambox">
+    <img  class="gallaryImg" src="../WebApp/assets/usha.PNG">
+    <p style="color: white;">Usha Rani</p>
+  </div>
+</div>
+
+<div class="footer">
+   <p style="height: 200px; text-align: center; line-height: 200px;"> Email:  hazarathgm@gmail.com</p>
+</div>
+
 </body>
 </html>
